@@ -1,0 +1,33 @@
+{
+	"name": "benancetin/laravel-datetime",
+	"description": "datetime is laravel package to print date and time in a given format.",
+    "keywords": ["laravel", "utc", "datetime", "package", "laravel", "time", "date"],
+    "license": "MIT",
+    "homepage": "https://github.com/benancetin/laravel-datetime",
+    "authors": [
+      {
+       "name": "Benan Cetin",
+       "email": "becetin@gmail.com"
+       }
+    ],
+    "support": {
+      "issues": "https://github.com/benancetin/laravel-datetime/issues",
+      "source": "https://github.com/benancetin/laravel-datetime"
+    },
+      "require": {
+          "php": ">=5.6.4",
+          "laravel/framework": "5.5.*"
+    },
+  "autoload": {
+      "psr-4": {
+       "benancetin\\datetime\\": "src/"
+   }
+},
+"extra": {
+  "laravel": {
+   "providers": [
+    "benancetin\\datetime\\DateTimeServiceProvider"
+]
+}
+}
+}
