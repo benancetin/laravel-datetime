@@ -1,5 +1,4 @@
-<?php
-namespace benancetin\datetime;
+<?php namespace benancetin\datetime;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
@@ -13,7 +12,7 @@ class DateTimeServiceProvider extends ServiceProvider
     */
     public function boot()
     {
-        Blade::directive('datetime', function ($expression) {
+        Blade::directive('datetime', function () {
             return '<?php echo "hello"; ?>';
         });
     }
