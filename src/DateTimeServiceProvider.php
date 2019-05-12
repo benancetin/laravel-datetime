@@ -2,6 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
+use Carbon\Carbon;
 
 class DateTimeServiceProvider extends ServiceProvider
 {
@@ -12,8 +13,9 @@ class DateTimeServiceProvider extends ServiceProvider
     */
     public function boot()
     {
-        Blade::directive('datetime', function ($exp) {
-            return '<?php echo "'.$exp.'"; ?>';
+        Blade::directive('showdatetime', function ($expression) {
+            $string =  Carbon::now($expression)->toDateTimeString();
+            return '<?php echo "<div>'.$string.'</div>"; ?>';
         });
     }
 
