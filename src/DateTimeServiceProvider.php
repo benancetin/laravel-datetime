@@ -12,8 +12,8 @@ class DateTimeServiceProvider extends ServiceProvider
     */
     public function boot()
     {
-        Blade::directive('datetime', function () {
-            return '<?php echo "hello"; ?>';
+        Blade::directive('datetime', function ($exp) {
+            return '<?php echo "'.$exp.'"; ?>';
         });
     }
 
