@@ -13,7 +13,7 @@ class DateTimeServiceProvider extends ServiceProvider
     */
     public function boot()
     {
-        Blade::directive('showdatetime', function ($expression) {
+        Blade::directive('datetime', function ($expression) {
             $string =  Carbon::now($expression)->toDateTimeString();
             return '<?php echo "<div>'.$string.'</div>"; ?>';
         });
